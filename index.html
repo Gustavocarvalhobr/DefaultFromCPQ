@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--LINK BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+      
+  
+    
+
+    <script src="./js/main.js"></script>
+
+    <title>Cadastro de Formulário</title>
+</head>
+<body>
+    <div id="container">
+        <div id="logoCenter">
+            <img id="logoCpq" src="./img/logocpq.png">
+        </div>   
+ 
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-5">
+          <label for="validationCustom01" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="validationCustom01" value="Insirir o nome" required>
+        </div>
+        <div class="col-md-5">
+          <label for="validationCustom02" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="validationCustom02" value="insirir o sobrenome" required>
+        </div>
+     
+        <div class="col-md-3">
+          <label for="validationCustom02" class="form-label">CPF</label>
+          <input type="text" class="form-control cpfOuCnpj" id="validationCustom02" onkeypress="$(this).mask('000.000.000-00');">
+          <!--<input type="text" class="form-control cpfOuCnpj" id="validationCustom02" placeholder="Insira o CPF" required>-->
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Data de Nascimento</label>
+          <div class="input-group has-validation">
+            <input type="date" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+          </div>
+        </div>
+        <div class="form-check radiodisplay">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Homem
+          </label><br>          
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Mulher
+          </label>          
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Estado</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Selecionar...</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">CEP</label>
+          <input type="text" class="form-control" id="validationCustom05" onkeypress="$(this).mask('00.000-000')" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">Celular</label>
+            <input type="tel" class="form-control" id="validationCustom03" onkeypress="$(this).mask('(00) 0000-00009')" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="validationCustom03" onkeypress="$(this).mask('(00) 0000-00009')" required>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">E-mail Pessoal</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+          </div>
+          <hr>
+          <div class="col-md-4">
+          <label for="validationCustom03" class="form-label">Unidade cadastrada</label>
+          <select class="form-select fieldsize" aria-label="Default select example">
+            <option selected>Selecione sua unidade </option>
+            <option value="matriz">Matriz</option>
+            <option value="evcp">Aeroporto de Viracopos</option>
+            <option value="egru">Aeroporto de Guarulhos</option>
+            <option value="ebsb">Aeroporto de Brasilia</option>
+            <option value="ebfor">Aeroporto de Fortaleza</option>
+            <option value="epoa">Aeroporto de Porto Alegre</option>
+          </select>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom03" class="form-label">Centro de Custo</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Selecionar </option>
+              <option value="1000">1101</option>
+              <option value="1000">1102</option>
+              <option value="1000">1103</option>
+              <option value="1000">1104</option>
+              <option value="1000">1105</option>
+              <option value="1000">1106</option>
+              <option value="1000">1107</option>              
+            </select>
+            </div>
+            <div class="col-md-7 sizeformcheck checkboxtypework">
+              <label for="validationCustom03" class="form-label">Rotina de trabalho:</label>
+            <div class="form-check">                
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Remoto
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+              <label class="form-check-label" for="flexCheckChecked">
+                Presencial
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">E-mail Corporativo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom03" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="validationCustom03" onkeypress="$(this).mask('(00) 0000-00009')" required>
+          </div>
+          <div class="col-md-2">
+            <label for="validationCustom03" class="form-label">Ramal</label>
+            <input type="number" class="form-control" id="validationCustom03" required>
+          </div>
+      </form>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+#logoCenter{
+    
+    display: flex;
+    justify-content: center;
+        
+
+}
+
+#logoCpq{
+    display: block;
+    width: 25%;
+}
+
+#container{
+    position: relative;
+    /*background-color: red;*/
+    width: 50%;
+    margin: auto;
+}
+
+.fieldsize{
+    width: 100%;
+}
+
+
+.sizeformcheck{
+    width: 30%;
+    }
+
+.checkboxtypework{
+     
+        padding-left: 2%;
+        }
+
+
+    /* Em telas menor que 600px será alterado o display */
+@media screen and (max-width: 1000px) {
+    .sizeformcheck {
+      width: 100%;
+ 
+    }
+  }
+
+.radiodisplay{
+    
+    width: 25%;
+    height: 25%;
+    padding-top: 3%;
+    padding-left: 5%;
+}
