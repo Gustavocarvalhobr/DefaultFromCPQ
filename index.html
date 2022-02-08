@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +14,8 @@
     <!--LINK CSS-->
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>   
   
-    
-
     <script src="./js/main.js"></script>
 
     <title>Cadastro de Formulário</title>
@@ -26,19 +26,19 @@
             <img id="logoCpq" src="./img/logocpq.png">
         </div>   
  
-    <form class="row g-3 needs-validation" novalidate>
+    <form  method="POST" action="salva_mensagem.php" class="row g-3 needs-validation" novalidate onsubmit="caduser()">
         <div class="col-md-5">
           <label for="validationCustom01" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="validationCustom01" required required>
+          <input type="text" name="nome" class="form-control" id="validationCustom01" placeholder="Insira o Nome" required>
         </div>
         <div class="col-md-5">
           <label for="validationCustom02" class="form-label">Sobrenome</label>
-          <input type="text" class="form-control" id="validationCustom02" required>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Insira o Sobrenome" required>
         </div>
      
         <div class="col-md-3">
           <label for="validationCustom02" class="form-label">CPF</label>
-          <input type="tel" class="form-control cpfOuCnpj" id="validationCustom02" onkeypress="$(this).mask('000.000.000-00');">
+          <input type="text" class="form-control cpfOuCnpj" id="validationCustom02" onkeypress="$(this).mask('000.000.000-00');">
           <!--<input type="text" class="form-control cpfOuCnpj" id="validationCustom02" placeholder="Insira o CPF" required>-->
         </div>
         <div class="col-md-4">
@@ -123,7 +123,7 @@
             <option value="epoa">Aeroporto de Porto Alegre</option>
           </select>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 checkboxtypework">
             <label for="validationCustom03" class="form-label">Centro de Custo</label>
             <select class="form-select" aria-label="Default select example">
               <option selected>Selecionar </option>
@@ -138,19 +138,19 @@
             </div>
             <div class="col-md-7 sizeformcheck checkboxtypework">
               <label for="validationCustom03" class="form-label">Rotina de trabalho:</label>
-            <div class="form-check">                
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Remoto
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-              <label class="form-check-label" for="flexCheckChecked">
-                Presencial
-              </label>
-            </div>
-          </div>
+                <div class="form-check">                
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Remoto
+                    </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Presencial
+                     </label>
+                 </div>
+             </div>
           <div class="col-md-4">
             <label for="validationCustom03" class="form-label">E-mail Corporativo</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
@@ -163,9 +163,13 @@
             <label for="validationCustom03" class="form-label">Ramal</label>
             <input type="number" class="form-control" id="validationCustom03" required>
           </div>
+          <br>
+          <!--<button type="submit">ENVIAR</button>-->
+          <input class="btn btn-primary" type="submit" value="Enviar">
+          
       </form>
     </div>
-
+    <br><br>
 
 
 </body>
